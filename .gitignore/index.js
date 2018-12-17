@@ -9,7 +9,7 @@ bot.on('ready', function () {
 
 bot.on('GuildMember', function (member) {
 member.createDM().then(function (channel){
-    channel.send('Bienvenue, nouveau sujet '+member.displayName)
+    return channel.send('Bienvenue, nouveau sujet '+member.displayName)
 }).catch(console.error)
 })
 
