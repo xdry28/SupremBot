@@ -3,10 +3,15 @@ const bot = new Discord.Client
 var prefix = ("$")
 
 bot.on('ready', function () {
-    bot.user.setActivity("Détruire l'humanité, $help")
-    console.log("Bot connecté avec succès")
+    bot.user.setActivity("Détruire l'humanité")
+    console.log("Bot connecté")
 })
-bot.login(process.env.TOKEN)
+
+bot.on('GuildMember', function (member) {
+member.createDM().then(function (channel){
+    channel.send('Bienvenue, nouveau sujet '+member.displayName)
+}).catch(console.error)
+})
 
 bot.on('message', function (message) {
     if (message.content === '$work') {
@@ -18,9 +23,10 @@ bot.on('message', function (message) {
     }
     if (message.content === prefix + "die"){
         message.channel.send("Je meurs.")
-        console.log("Commande help demandé")
     }
     if (message.author === 'xdry28') {
         message.channel.send("**SupremBot**")
     }
 })
+
+bot.login(process.env.TOKEN)
