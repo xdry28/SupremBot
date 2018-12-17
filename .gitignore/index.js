@@ -16,6 +16,10 @@ bot.on('message', function (message) {
         message.channel.send("**SupremBot** utilise le préfixe **$** pour fonctionner et permet entre autre d'aider l'Empereur Suprême dans sa gestion du serveur")
         console.log("Commande help demandé")
     }
+    if (message.content === prefix + "die"){
+        message.channel.send("Je meurs.")
+        console.log("Commande help demandé")
+    }
     if (message.author === 'xdry28') {
         message.channel.send("**SupremBot**")
     }
