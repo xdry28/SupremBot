@@ -8,24 +8,21 @@ bot.on('ready', function () {
 })
 
 bot.on('guildMemberAdd', function (member) {
-member.createDM().then(function (channel){
+    message.member.addRole('Roi')
+MessageChannel().then(function (channel){
     return channel.send('Bienvenue, nouveau sujet '+member.displayName)
 }).catch(console.error)
 })
 
 bot.on('message', function (message) {
     if (message.content === '$work') {
-        message.reply("Seul l'Empereur peut m'utiliser comme il le souhaite")
+        message.reply("1")
     }
     if (message.content === prefix + "help"){
         message.channel.send("**SupremBot** utilise le préfixe **$** pour fonctionner et permet entre autre d'aider l'Empereur Suprême dans sa gestion du serveur")
-        console.log("Commande help demandé")
     }
     if (message.content === prefix + "die"){
         message.channel.send("Je meurs.")
-    }
-    if (message.author === 'xdry28') {
-        message.channel.send("**SupremBot**")
     }
 })
 
