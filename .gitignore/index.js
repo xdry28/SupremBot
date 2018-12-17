@@ -7,15 +7,15 @@ bot.on('ready', function () {
     console.log("Bot connecté")
 })
 
-bot.on('GuildMember', function (member) {
+bot.on('guildMemberAdd', function (member) {
 member.createDM().then(function (channel){
     return channel.send('Bienvenue, nouveau sujet '+member.displayName)
 }).catch(console.error)
 })
 
 bot.on('message', function (message) {
-    if (message.content === '$test') {
-        message.reply("1")
+    if (message.content === '$work') {
+        message.reply("Seul l'Empereur peut m'utiliser comme il le souhaite")
     }
     if (message.content === prefix + "help"){
         message.channel.send("**SupremBot** utilise le préfixe **$** pour fonctionner et permet entre autre d'aider l'Empereur Suprême dans sa gestion du serveur")
