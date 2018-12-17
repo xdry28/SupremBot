@@ -14,8 +14,8 @@ member.createDM().then(function (channel){
 })
 
 bot.on('message', function (message) {
-    if (message.content === '$work') {
-        message.reply("Seul l'Empereur peut m'utiliser comme il le souhaite")
+    if (message.content === '$test') {
+        message.reply("1")
     }
     if (message.content === prefix + "help"){
         message.channel.send("**SupremBot** utilise le préfixe **$** pour fonctionner et permet entre autre d'aider l'Empereur Suprême dans sa gestion du serveur")
