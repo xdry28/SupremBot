@@ -8,10 +8,9 @@ bot.on('ready', function () {
 })
 
 bot.on('guildMemberAdd', function (member) {
-    message.member.addRole('Roi')
-MessageChannel().then(function (channel){
-    return channel.send('Bienvenue, nouveau sujet '+member.displayName)
-}).catch(console.error)
+    member.addRole(524694958092058645).catch(console.error);
+    return message.channel.send('Bienvenue, nouveau sujet '+member.displayName)
+})
 })
 
 bot.on('message', function (message) {
