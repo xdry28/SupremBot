@@ -7,10 +7,13 @@ bot.on('ready', function () {
     console.log("Bot connecté")
 })
 
-bot.on('guildMemberAdd', function (member) {
-    member.addRole(524694958092058645).catch(console.error);
-    return message.channel.send('Bienvenue, nouveau sujet '+member.displayName)
-})
+//member.addRole(524694958092058645).catch(console.error);
+//return message.channel.send('Bienvenue, nouveau sujet '+member.displayName)
+
+bot.on('guildMemberAdd', member => {
+    //var role = member.guild.role.find('name', 'User');
+    member.addRole(524694958092058645)
+    message.channel.send("Bienvenue" +member.displayName)
 })
 
 bot.on('message', function (message) {
