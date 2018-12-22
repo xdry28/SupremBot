@@ -10,8 +10,8 @@ bot.on('ready', function () {
 //return message.channel.send('Bienvenue, nouveau sujet '+member.displayName)
 
 bot.on('guildMemberAdd', member => {
-    var role = member.guild.roles.find('name', 'User');
-    member.addRole(526144681361539097)
+    var role = member.guild.roles.find('name', 'Roi');
+    member.addRole(role)
 });
 
 bot.on('message', function (message) {
