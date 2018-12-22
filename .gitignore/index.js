@@ -9,7 +9,6 @@ bot.on('ready', function () {
 
 //return message.channel.send('Bienvenue, nouveau sujet '+member.displayName)
 
-
 bot.on('guildMemberAdd', member => {
     let role = message.guild.roles.find(r => r.name === "Roi");
 
@@ -20,9 +19,7 @@ bot.on('guildMemberAdd', member => {
 
     // Add the role!
     member.addRole(role).catch(console.error);
-}
-
-
+})
     //var role = member.guild.roles.find('name', 'Roi');
     /*var role = message.guild.roles.find(r => r.name === "Roi");
     member.addRole(role)
