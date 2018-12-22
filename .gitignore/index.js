@@ -12,7 +12,7 @@ bot.on('ready', function () {
 
 bot.on('guildMemberAdd', member => {
     //var role = member.guild.role.find('name', 'User');
-    member.addRole(524694958092058645)
+    member.addRole(526144681361539097)
     message.channel.send("Bienvenue" +member.displayName)
 })
 
