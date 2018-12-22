@@ -20,7 +20,7 @@ bot.on('guildMemberAdd', member => {
 
     // Add the role!
     member.addRole(role).catch(console.error);
-})
+}
 
 
     //var role = member.guild.roles.find('name', 'Roi');
