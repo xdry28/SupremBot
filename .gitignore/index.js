@@ -13,10 +13,10 @@ bot.on('ready', function () {
 
 bot.on('guildMemberAdd', function (member) {
   
-    message.member.addRole('526144681361539097')
+    message.member.addRole('Roi')
     .then(console.log)
     .catch(console.error);
-    message.channel.sendMessage('Bienvenue, nouveau sujet ' + member.displayName)
+    message.channel.send('Bienvenue, nouveau sujet ' + member.displayName)
 })
 
 
