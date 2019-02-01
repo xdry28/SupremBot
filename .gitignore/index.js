@@ -1,7 +1,6 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client
-const Ping = require('./commands/ping')
-const Play = require('./commands/play')
+
 var prefix = ("$")
 
 
@@ -23,8 +22,6 @@ bot.on('guildMemberAdd', function (member) {
 
 
 bot.on('message', function (message) {
-    let commandUser =
-        Ping.parse(message)
     if (message.content === '$work') {
         message.reply("5")
     }
