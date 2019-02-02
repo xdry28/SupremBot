@@ -1,10 +1,10 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client
-
 var prefix = ("$")
 
 
 bot.on('ready', function () {
+
     bot.user.setActivity("Détruire l'humanité")
     console.log("Bot connecté")
 })
@@ -22,8 +22,9 @@ bot.on('guildMemberAdd', function (member) {
 
 
 bot.on('message', function (message) {
+
     if (message.content === '$work') {
-        message.reply("5")
+        message.reply("6")
     }
     if (message.content === prefix + "help") {
         message.channel.send("**SupremBot** utilise le préfixe **$** pour fonctionner et permet entre autre d'aider l'Empereur Suprême dans sa gestion du serveur")
