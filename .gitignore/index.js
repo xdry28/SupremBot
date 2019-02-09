@@ -9,8 +9,6 @@ bot.on('ready', function () {
     console.log("Bot connecté")
 })
 
-//return message.channel.send('Bienvenue, nouveau sujet '+member.displayName)
-
 
 bot.on('guildMemberAdd', function (member) {
 
@@ -24,11 +22,22 @@ bot.on('guildMemberAdd', function (member) {
 bot.on('message', function (message) {
 
     if (message.content === '$work') {
-        message.reply("6")
+        message.reply("7")
     }
     if (message.content === prefix + "help") {
         message.channel.send("**SupremBot** utilise le préfixe **$** pour fonctionner et permet entre autre d'aider l'Empereur Suprême dans sa gestion du serveur")
     }
+    if (message.content === prefix + "play") {
+        let voiceChannel = message.guild.channels
+        .filter(function (channel) {return channel.type === 'voice'})
+        .first()
+        voiceChannel 
+        .join
+        .then(function (connection) {
+            connection.playFile('./Teleboubizes.wav')
+        })
+    }
 })
+
 
 bot.login(process.env.TOKEN)
